@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories>
+  <repository>    <id>KettleFileRepository</id>
+    <name>Desafio2</name>
+    <description>File repository</description>
+    <is_default>false</is_default>
+    <base_directory>C:\Users\Pichau\Documents\Bootcamp Eng Dados\Modulo 2\desafio</base_directory>
+    <read_only>N</read_only>
+    <hides_hidden_files>N</hides_hidden_files>
+  </repository>  </repositories>

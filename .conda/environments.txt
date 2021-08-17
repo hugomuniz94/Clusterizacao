@@ -1,0 +1,8 @@
+C:\Users\Pichau\anaconda3
+C:\Users\Pichau\ANACON~1\envs\spacy_condaenv
+C:\ProgramData\Anaconda3
+C:\ProgramData\Anaconda3\envs\tf
+C:\Users\Pichau\anaconda3\envs\bootcamp
+C:\Users\Pichau\.conda\envs\airflowenv
+C:\Users\Pichau\anaconda3\envs\predict_future_sales
+C:\Users\Pichau\anaconda3\envs\Test

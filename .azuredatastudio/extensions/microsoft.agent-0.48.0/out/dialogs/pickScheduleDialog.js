@@ -1,0 +1,101 @@
+"use strict";
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the Source EULA. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PickScheduleDialog = void 0;
+const nls = require("vscode-nls");
+const azdata = require("azdata");
+const vscode = require("vscode");
+const pickScheduleData_1 = require("../data/pickScheduleData");
+const localize = nls.loadMessageBundle();
+class PickScheduleDialog {
+    constructor(ownerUri, jobName) {
+        // TODO: localize
+        // Top level
+        this.DialogTitle = localize('pickSchedule.jobSchedules', "Job Schedules");
+        this.OkButtonText = localize('pickSchedule.ok', "OK");
+        this.CancelButtonText = localize('pickSchedule.cancel', "Cancel");
+        this.SchedulesLabelText = localize('pickSchedule.availableSchedules', "Available Schedules:");
+        this._onSuccess = new vscode.EventEmitter();
+        this.onSuccess = this._onSuccess.event;
+        this.model = new pickScheduleData_1.PickScheduleData(ownerUri, jobName);
+    }
+    async showDialog() {
+        this.model.initialize().then((result) => {
+            if (this.loadingComponent) {
+                this.loadingComponent.loading = false;
+            }
+            if (this.model.schedules) {
+                let data = [];
+                for (let i = 0; i < this.model.schedules.length; ++i) {
+                    let schedule = this.model.schedules[i];
+                    data[i] = [schedule.id, schedule.name, schedule.description];
+                }
+                this.schedulesTable.data = data;
+            }
+        });
+        this.dialog = azdata.window.createModelViewDialog(this.DialogTitle);
+        this.initializeContent();
+        this.dialog.okButton.onClick(async () => await this.execute());
+        this.dialog.cancelButton.onClick(async () => await this.cancel());
+        this.dialog.okButton.label = this.OkButtonText;
+        this.dialog.cancelButton.label = this.CancelButtonText;
+        azdata.window.openDialog(this.dialog);
+    }
+    initializeContent() {
+        this.dialog.registerContent(async (view) => {
+            this.schedulesTable = view.modelBuilder.table()
+                .withProperties({
+                columns: [
+                    PickScheduleDialog.SchedulesIDText,
+                    PickScheduleDialog.ScheduleNameLabelText,
+                    PickScheduleDialog.ScheduleDescription
+                ],
+                data: [],
+                height: 750,
+                width: 430
+            }).component();
+            let formModel = view.modelBuilder.formContainer()
+                .withFormItems([{
+                    component: this.schedulesTable,
+                    title: this.SchedulesLabelText
+                }]).withLayout({ width: '100%' }).component();
+            this.loadingComponent = view.modelBuilder.loadingComponent().withItem(formModel).component();
+            this.loadingComponent.loading = true;
+            this.model.initialize().then((result) => {
+                this.loadingComponent.loading = false;
+                if (this.model.schedules) {
+                    let data = [];
+                    for (let i = 0; i < this.model.schedules.length; ++i) {
+                        let schedule = this.model.schedules[i];
+                        data[i] = [schedule.id, schedule.name, schedule.description];
+                    }
+                    this.schedulesTable.data = data;
+                }
+            });
+            this.loadingComponent.loading = !this.model.isInitialized();
+            await view.initializeModel(this.loadingComponent);
+        });
+    }
+    async execute() {
+        this.updateModel();
+        await this.model.save();
+        this._onSuccess.fire(this.model);
+    }
+    async cancel() {
+    }
+    updateModel() {
+        let selectedRows = this.schedulesTable.selectedRows;
+        if (selectedRows && selectedRows.length > 0) {
+            let selectedRow = selectedRows[0];
+            this.model.selectedSchedule = this.model.schedules[selectedRow];
+        }
+    }
+}
+exports.PickScheduleDialog = PickScheduleDialog;
+PickScheduleDialog.ScheduleNameLabelText = localize('pickSchedule.scheduleName', "Name");
+PickScheduleDialog.SchedulesIDText = localize('pickSchedule.scheduleID', "ID");
+PickScheduleDialog.ScheduleDescription = localize('pickSchedule.description', "Description");
+//# sourceMappingURL=pickScheduleDialog.js.map

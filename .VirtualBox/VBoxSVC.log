@@ -1,0 +1,69 @@
+00:00:00.004558 main     VirtualBox COM Server 6.1.18 r142142 win.amd64 (Jan  7 2021 15:32:19) release log
+00:00:00.004562 main     Log opened 2021-04-12T21:37:01.157946100Z
+00:00:00.004563 main     Build Type: release
+00:00:00.004583 main     OS Product: Windows 10
+00:00:00.004584 main     OS Release: 10.0.19042
+00:00:00.004585 main     OS Service Pack: 
+00:00:00.071986 main     DMI Product Name: System Product Name
+00:00:00.082230 main     DMI Product Version: System Version
+00:00:00.082241 main     Firmware type: UEFI
+00:00:00.082465 main     Secure Boot: VERR_PRIVILEGE_NOT_HELD
+00:00:00.083665 main     Host RAM: 8123MB (7.9GB) total, 4705MB (4.5GB) available
+00:00:00.083671 main     Executable: C:\Program Files\Oracle\VirtualBox\VBoxSVC.exe
+00:00:00.083672 main     Process ID: 2104
+00:00:00.083673 main     Package type: WINDOWS_64BITS_GENERIC
+00:00:00.151426          VirtualBox: object creation starts
+00:00:00.151669          Home directory: 'C:\Users\Pichau\.VirtualBox'
+00:00:00.151796          Installed Drivers:
+00:00:00.153611            C:\WINDOWS\system32\DRIVERS\VBoxNetLwf.sys (Version: 6.1.18.42142)
+00:00:00.154237            C:\WINDOWS\system32\DRIVERS\VBoxUSBMon.sys (Version: 6.1.18.42142)
+00:00:00.154652            C:\WINDOWS\system32\DRIVERS\VBoxDrv.sys (Version: 6.1.18.42142)
+00:00:00.155565            C:\WINDOWS\system32\DRIVERS\VBoxNetAdp6.sys (Version: 6.1.18.42142)
+00:00:00.169932          Loading settings file "C:\Users\Pichau\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:00.172831          usbLibGetDevices: Starting USB device enumeration
+00:00:00.201023          usbLibGetDevices: Found 2 USB devices, 0 captured
+00:00:00.301057          HostDnsMonitor: initializing
+00:00:00.307555          HostDnsMonitor: updating information
+00:00:00.307621          HostDnsMonitor: old information
+00:00:00.307622            no server entries
+00:00:00.307623            no domain set
+00:00:00.307623            no search string entries
+00:00:00.307624          HostDnsMonitor: new information
+00:00:00.307624            server 1: 181.213.132.4
+00:00:00.307625            server 2: 181.213.132.5
+00:00:00.307626            domain: home
+00:00:00.307626            no search string entries
+00:00:00.350945          VD: VDInit finished with VINF_SUCCESS
+00:00:00.362682          Loading settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA\EcossistemaHadoopEDA.vbox" with version "1.16-windows"
+00:00:00.374378          Loading settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+00:00:00.375312          VirtualBox: object created
+00:00:02.386521          Saving settings file "C:\Users\Pichau\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:02.394021          Saving settings file "C:\Users\Pichau\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:05.846705          Launched VM: 74710656 pid: 6068 (0x17b4) frontend: GUI/Qt name: EcossistemaHadoopEDA 1
+00:00:09.639792          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={No extension pack by the name 'Oracle VM VirtualBox Extension Pack' was found}, preserve=false aResultDetail=0
+00:00:54.072587          Saving settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+00:06:52.739471 USBPROXY usbLibGetDevices: Starting USB device enumeration
+00:06:52.765390 USBPROXY usbLibGetDevices: Found 2 USB devices, 0 captured
+00:28:43.258592 dns-monitor HostDnsMonitor: updating information
+00:28:43.258681 dns-monitor HostDnsMonitor: unchanged
+00:41:37.278537          Saving settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+00:41:37.309015          Saving settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+00:41:37.363063          Saving settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+00:58:43.279266 dns-monitor HostDnsMonitor: updating information
+00:58:43.279357 dns-monitor HostDnsMonitor: unchanged
+01:02:30.037787          Saving settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+01:02:30.062944          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Saved screenshot thumbnail data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+01:02:30.088203          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Saved screenshot thumbnail data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+01:02:30.400077 SaveState Saving settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+01:02:30.917707          Saving settings file "C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoopEDA 1.vbox" with version "1.16-windows"
+01:06:10.918881          Saving settings file "C:\Users\Pichau\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+01:06:10.927171          Saving settings file "C:\Users\Pichau\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+01:06:10.941300          Saving settings file "C:\Users\Pichau\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+01:06:10.953459          Saving settings file "C:\Users\Pichau\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+01:06:16.483839 main     VirtualBox: object deletion starts
+01:06:16.484650 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium 'C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA\EcossistemaHadoop-disk001.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+01:06:16.485375 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium 'C:\Users\Pichau\VirtualBox VMs\Novo grupo\EcossistemaHadoopEDA 1\EcossistemaHadoop-disk001.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+01:06:16.487016 main     HostDnsMonitor: shutting down ...
+01:06:16.487061 main     HostDnsMonitor: shut down
+01:06:16.489412 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+01:06:16.489925 main     VirtualBox: object deleted
