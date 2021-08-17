@@ -1,0 +1,70 @@
+{
+	"name": "terraform-autocomplete",
+	"displayName": "Terraform Autocomplete",
+	"description": "Autocomplete for AWS resources with terraform.",
+	"version": "0.0.8",
+	"publisher": "erd0s",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/erd0s/terraform-autocomplete"
+	},
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"capabilities": {
+		"completionProvider": {
+			"resolveProvider": "true",
+			"triggerCharacters": [
+				"."
+			]
+		}
+	},
+	"activationEvents": [
+		"onLanguage:terraform"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "terraform",
+				"aliases": [
+					"Terraform",
+					"terraform"
+				],
+				"extensions": [
+					".tf",
+					".tfvars",
+					".hcl"
+				],
+				"configuration": "./terraform.configuration.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.40",
+		"mocha": "^2.3.3",
+		"typescript": "^2.0.3",
+		"vscode": "^1.1.5"
+	},
+	"dependencies": {
+		"@types/opn": "^3.0.28",
+		"lodash": "^4.17.4",
+		"opn": "^5.1.0"
+	},
+	"__metadata": {
+		"id": "36bd7cbe-6e30-473f-bbdb-8952eaf40bc2",
+		"publisherId": "8c194fc5-3529-4396-b63c-20c56e9eb9ee",
+		"publisherDisplayName": "erd0s",
+		"installedTimestamp": 1629156758717
+	}
+}
